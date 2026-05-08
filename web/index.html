@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Book Store</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div>
+                <h1>Creative Book Store</h1>
+                <p>Full-stack book manager with Java backend and browser frontend.</p>
+            </div>
+            <div class="note">Server: <strong>Java HttpServer</strong></div>
+        </header>
+        <main class="app-main">
+            <section class="book-form">
+                <h2>Book details</h2>
+                <label>Title<input id="title" type="text" /></label>
+                <label>Author<input id="author" type="text" /></label>
+                <label>Price<input id="price" type="number" step="0.01" min="0" /></label>
+                <label>Quantity<input id="quantity" type="number" min="0" /></label>
+                <div class="button-row">
+                    <button id="add-btn" type="button">Add Book</button>
+                    <button id="update-btn" type="button">Update Book</button>
+                    <button id="delete-btn" type="button">Delete Book</button>
+                </div>
+            </section>
+            <section class="book-table">
+                <h2>Inventory</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="books-body"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
